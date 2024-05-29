@@ -2,14 +2,14 @@
 using namespace std;
 
 bool check(char ch, vector<char> range);
-vector<string> convertTolnfix(string input);
+vector<string> convertToInfix(string input);
 string removeWhitespace(string str);
 
 int main(){
   string input;
 getline(cin, input);
 
-vector<string> infix = convertTolnfix(removeWhitespace(input));
+vector<string> infix = convertToInfix(removeWhitespace(input));
 vector<string> postfix = convertToPostfix(infix)
 cout<< evaluateOperation(postfix) << endl;
 
